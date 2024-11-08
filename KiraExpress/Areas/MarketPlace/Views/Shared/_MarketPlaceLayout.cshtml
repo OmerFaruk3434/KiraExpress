@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr" data-topbar-color="dark" data-menu-color="light">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully responsive premium admin dashboard template" />
+    <meta name="author" content="Techzaa" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="~/MarketPlace/Css/vendor.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/MarketPlace/Css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/MarketPlace/Css/app.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        @{
+            Html.RenderPartial("_MarketPlaceHeader");
+        }
+        @{
+            Html.RenderPartial("_MarketPlaceThemeSettings");
+        }
+        @{
+            Html.RenderPartial("_MarketPlaceNavbar");
+        }
+        @RenderBody()
+    </div>
+    <script src="~/MarketPlace/Js/vendor.js"></script>
+    <script src="~/MarketPlace/Js/app.js"></script>
+    <script src="~/MarketPlace/Js/jsvectormap.min.js"></script>
+    <script src="~/MarketPlace/Js/world-merc.js"></script>
+    <script src="~/MarketPlace/Js/world.js"></script>
+    <script src="~/MarketPlace/Js/dashboard.js"></script>
+    <script src="~/MarketPlace/Js/config.js"></script>
+</body>
+</html>
