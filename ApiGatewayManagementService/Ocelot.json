@@ -1,0 +1,20 @@
+{
+  "Routes": [
+    // Ürün Listeleme
+    {
+      "DownstreamPathTemplate": "/Api/Product/ProductAdd",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7144
+        }
+      ],
+      "UpstreamPathTemplate": "/ProductManagement/ProductAdd",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7034"
+  }
+}

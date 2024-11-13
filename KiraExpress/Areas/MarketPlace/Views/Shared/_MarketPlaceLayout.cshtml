@@ -1,37 +1,66 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
+<html lang="en" data-bs-theme="dark">
 
-<html lang="tr" data-topbar-color="dark" data-menu-color="light">
 <head>
-    <title>@ViewBag.Title</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A fully responsive premium admin dashboard template" />
-    <meta name="author" content="Techzaa" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link href="~/MarketPlace/Css/vendor.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/MarketPlace/Css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/MarketPlace/Css/app.min.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxton | Bootstrap 5 Admin Dashboard Template</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+    <!-- loader-->
+    <link href="~/MarketPlace/Css/pace.min.css" rel="stylesheet">
+    <script src="~/MarketPlace/Js/pace.min.js"></script>
+
+    <!--plugins-->
+    <link href="~/MarketPlace/Css/perfect-scrollbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/MarketPlace/Css/metisMenu.min.css">
+    <link rel="stylesheet" type="text/css" href="~/MarketPlace/Css/mm-vertical.css">
+    <link rel="stylesheet" type="text/css" href="~/MarketPlace/Css/simplebar.css">
+    <!--bootstrap css-->
+    <link href="~/MarketPlace/Css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <!--main css-->
+    <link href="~/MarketPlace/Css/bootstrap-extended.css" rel="stylesheet">
+    <link href="~/MarketPlace/Css/main.css" rel="stylesheet">
+    <link href="~/MarketPlace/Css/dark-theme.css" rel="stylesheet">
+    <link href="~/MarketPlace/Css/blue-theme.css" rel="stylesheet">
+    <link href="~/MarketPlace/Css/semi-dark.css" rel="stylesheet">
+    <link href="~/MarketPlace/Css/bordered-theme.css" rel="stylesheet">
+    <link href="~/MarketPlace/Css/responsive.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="wrapper">
         @{
             Html.RenderPartial("_MarketPlaceHeader");
         }
         @{
-            Html.RenderPartial("_MarketPlaceThemeSettings");
-        }
-        @{
             Html.RenderPartial("_MarketPlaceNavbar");
         }
         @RenderBody()
+        <div class="overlay btn-toggle"></div>
+        <footer class="page-footer">
+            <p class="mb-0">Copyright © 2024. All right reserved.</p>
+        </footer>
+        @{
+            Html.RenderPartial("_MarketPlaceThemeSettings");
+        }
     </div>
-    <script src="~/MarketPlace/Js/vendor.js"></script>
-    <script src="~/MarketPlace/Js/app.js"></script>
-    <script src="~/MarketPlace/Js/jsvectormap.min.js"></script>
-    <script src="~/MarketPlace/Js/world-merc.js"></script>
-    <script src="~/MarketPlace/Js/world.js"></script>
-    <script src="~/MarketPlace/Js/dashboard.js"></script>
-    <script src="~/MarketPlace/Js/config.js"></script>
+    @RenderSection("Scripts", required: false)
+    <script src="~/MarketPlace/Js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="~/MarketPlace/Js/jquery.min.js"></script>
+    <!--plugins-->
+    <script src="~/MarketPlace/Js/perfect-scrollbar.js"></script>
+    <script src="~/MarketPlace/Js/metisMenu.min.js"></script>
+    <script src="~/MarketPlace/Js/apexcharts.min.js"></script>
+    <script src="~/MarketPlace/Js/simplebar.min.js"></script>
+    <script src="~/MarketPlace/Js/jquery.peity.min.js"></script>
+    <script>
+        $(".data-attributes span").peity("donut")
+    </script>
+    <script src="~/MarketPlace/Js/dashboard2.js"></script>
+    <script src="~/MarketPlace/Js/main.js"></script>
 </body>
 </html>

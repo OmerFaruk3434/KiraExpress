@@ -11,15 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManagementService", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalManagementService", "RentalManagementService\RentalManagementService.csproj", "{EC342A2A-5F20-4B1A-A3A5-808DB253B6E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentManagementService", "PaymentManagementService\PaymentManagementService.csproj", "{CF7B61D4-F6C4-4E29-9E37-AEEBCEDDFDCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentManagementService", "PaymentManagementService\PaymentManagementService.csproj", "{CF7B61D4-F6C4-4E29-9E37-AEEBCEDDFDCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationManagementService", "NotificationManagementService\NotificationManagementService.csproj", "{2976144D-E033-47AD-AC7C-DE772EECF829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationManagementService", "NotificationManagementService\NotificationManagementService.csproj", "{2976144D-E033-47AD-AC7C-DE772EECF829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewManagementService", "ReviewManagementService\ReviewManagementService.csproj", "{DCEB2428-A92D-4A68-B0E5-F5F8300E3616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewManagementService", "ReviewManagementService\ReviewManagementService.csproj", "{DCEB2428-A92D-4A68-B0E5-F5F8300E3616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGatewayManagementService", "ApiGatewayManagementService\ApiGatewayManagementService.csproj", "{D62C8CD1-0DE4-4FB7-851F-3BF6B93F8517}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGatewayManagementService", "ApiGatewayManagementService\ApiGatewayManagementService.csproj", "{D62C8CD1-0DE4-4FB7-851F-3BF6B93F8517}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAndFilterManagementService", "SearchAndFilterManagementService\SearchAndFilterManagementService.csproj", "{7CEA1487-1DEF-4EC9-A1DC-AC18239ECFD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchAndFilterManagementService", "SearchAndFilterManagementService\SearchAndFilterManagementService.csproj", "{7CEA1487-1DEF-4EC9-A1DC-AC18239ECFD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

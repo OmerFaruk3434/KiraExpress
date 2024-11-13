@@ -1,22 +1,28 @@
 using Microsoft.EntityFrameworkCore;
-using ProductManagementService.Data; // DbContext sýnýfýnýn bulunduðu namespace
+using ProductManagementService.Data;
+using ProductManagementService.Models;
+using ProductManagementService.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
+// Add MVC services
+builder.Services.AddControllersWithViews();
 
-// Veritabaný baðlantýsýný yapýlandýr
+// Register DbContext
 builder.Services.AddDbContext<ProductManagementContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("KiraExpressProductManagement")));
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Register Repositories and Services
+builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<ProductService>();
+
+// Swagger configuration
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Enable Swagger in development environment
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -24,9 +30,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles(); // Static files for MVC
 app.UseAuthorization();
 
+// Map controllers
 app.MapControllers();
 
 app.Run();
