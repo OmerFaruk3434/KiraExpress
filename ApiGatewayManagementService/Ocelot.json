@@ -2,6 +2,20 @@
   "Routes": [
     // Ürün Listeleme
     {
+      "DownstreamPathTemplate": "/Api/Product/ProductList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7144
+        }
+      ],
+      "UpstreamPathTemplate": "/ProductManagement/ProductList",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    // Ürün Ekleme
+    {
       "DownstreamPathTemplate": "/Api/Product/ProductAdd",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [

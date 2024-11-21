@@ -28,7 +28,7 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "areas",
-    pattern: "{area:exists}/{controller=Product}/{action=ProductAdd}/{id?}"
+    pattern: "{area:exists}/{controller=Product}/{action=Products}/{id?}"
 );
 
 app.Run();

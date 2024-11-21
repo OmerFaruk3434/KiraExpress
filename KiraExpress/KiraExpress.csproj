@@ -15,12 +15,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\MarketPlace\Controllers\" />
+    <Folder Include="Areas\MarketPlace\DataTransferObjects\" />
+    <Folder Include="Areas\MarketPlace\ViewModels\" />
     <Folder Include="Models\" />
     <Folder Include="wwwroot\MarketPlace\Css\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Telerik.Documents.Core" Version="2023.1.104" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
