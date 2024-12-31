@@ -1,34 +1,52 @@
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/GitmesiGerekenAction/Controller",
+//      "DownstreamScheme": "https",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7144
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/Triger",
+//      "UpstreamHttpMethod": [ "GET" ]
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "https://localhost:7034"
+//  }
+//}
+
 {
   "Routes": [
-    // Ürün Listeleme
     {
-      "DownstreamPathTemplate": "/Api/Product/ProductList",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/users/{everything}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7144
+          "Port": 7156
         }
       ],
-      "UpstreamPathTemplate": "/ProductManagement/ProductList",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamPathTemplate": "/users/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
-
-    // Ürün Ekleme
     {
-      "DownstreamPathTemplate": "/Api/Product/ProductAdd",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/products/{everything}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7144
         }
       ],
-      "UpstreamPathTemplate": "/ProductManagement/ProductAdd",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamPathTemplate": "/products/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     }
+    // Diğer servisler için benzer şekilde ekle
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7034"
+    "BaseUrl": "http://localhost:7034"
   }
 }

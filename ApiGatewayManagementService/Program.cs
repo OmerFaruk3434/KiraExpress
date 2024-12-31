@@ -5,34 +5,32 @@ using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 
-// Veritabaný baðlantýsýný yapýlandýr
 builder.Services.AddDbContext<ApiGatewayManagementContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("KiraExpressApiGatewayManagement")));
 
-// Ocelot için yapýlandýrma ekle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Configuration.AddJsonFile("Ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration);
 builder.Services.AddHttpClient();
 
-var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/users/swagger/v1/swagger.json", "User API");
+        c.SwaggerEndpoint("/products/swagger/v1/swagger.json", "Product API");
+    });
 }
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
-
-// Ocelot middleware'ini en sonda kullanýn
 app.UseOcelot().Wait();
 
 app.Run();
